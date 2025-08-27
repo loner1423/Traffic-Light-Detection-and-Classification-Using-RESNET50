@@ -1,0 +1,2 @@
+python TrafficLight.py
+pause
