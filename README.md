@@ -29,16 +29,7 @@ The model is trained to detect and classify traffic lights into the following **
 ```
 TrafficLight-Detection-ResNet50/
 │
-├── data/                      # Dataset
-│   ├── train/                 # Training dataset
-│   │   ├── go/
-│   │   ├── goforward/
-│   │   ├── goleft/
-│   │   ├── stop/
-│   │   ├── stopleft/
-│   │   ├── warning/
-│   │   └── warningleft/
-│   └── test/                  # Testing dataset
+├── dataet/                      # Training dataset
 │       ├── go/
 │       ├── goforward/
 │       ├── goleft/
@@ -46,13 +37,12 @@ TrafficLight-Detection-ResNet50/
 │       ├── stopleft/
 │       ├── warning/
 │       └── warningleft/
-│
+├── util/                      # utilized model packages and libraries
+├── testImages/                # test the model with Images
+├── video/                     # test the model with videos
 ├── model/                     # Saved trained model & weights
-├── notebooks/                 # Jupyter notebooks for EDA & training
-├── scripts/                   # Python scripts for training & testing
-│   ├── train.py               # Script to train the model
-│   ├── test.py                # Script to test predictions
-│   └── utils.py               # Helper functions
+├── test                       # test image
+├── run                        # exe file
 ├── requirements.txt           # List of dependencies
 ├── README.md                  # Project documentation
 └── main.py                    # Run detection/classification
@@ -74,7 +64,7 @@ TrafficLight-Detection-ResNet50/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/your-username/TrafficLight-Detection-ResNet50.git
+git clone https://github.com/loner1423/TrafficLight-Detection-ResNet50.git
 cd TrafficLight-Detection-ResNet50
 ```
 
@@ -91,16 +81,7 @@ pip install -r requirements.txt
 Organize your dataset in this structure before training:
 
 ```
-data/
-├── train/
-│   ├── go/
-│   ├── goforward/
-│   ├── goleft/
-│   ├── stop/
-│   ├── stopleft/
-│   ├── warning/
-│   └── warningleft/
-└── test/
+dataset/
     ├── go/
     ├── goforward/
     ├── goleft/
@@ -113,18 +94,6 @@ data/
 ---
 
 ## 🚀 Usage
-
-### **Train the model**
-
-```bash
-python scripts/train.py --epochs 30 --batch_size 32 --lr 0.0001
-```
-
-### **Test the model**
-
-```bash
-python scripts/test.py --image path_to_image.jpg
-```
 
 ### **Run live detection**
 
@@ -168,12 +137,6 @@ python main.py --video traffic_video.mp4
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 🙌 Acknowledgements
 
 * [ResNet50 Paper](https://arxiv.org/abs/1512.03385)
@@ -181,5 +144,3 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 * Public traffic light datasets
 
 ---
-
-Would you like me to **add example code snippets** for training and prediction to this README?
